@@ -1,0 +1,32 @@
+ALGORITHM  ditinct_elements
+
+VAR
+    tab1, tab2 : ARRAY_OF [integer];
+    sum,i,j,m n:integer;
+
+BEGIN
+    sum:=0;
+    n:=tab1.length , m:=tab2.length;
+
+     FOR i FROM 0 TO n-1 STEP 1 do
+
+        FOR j FROM  0 TO m-1 STEP 1 do
+
+             IF (tab1[i])= tab2[j])THEN
+                 tab1[i]:=0;
+                 tab2[j]:=0;
+             END_IF
+                sum:= sum+tab1[i];
+        END_FOR
+
+                    FOR j FROM 0 to m-1 STEP 1 do
+                    
+                     sum:=sum+tab2[j];
+
+                    END_FOR
+END_FOR
+
+    writeln(sum);
+
+
+END
